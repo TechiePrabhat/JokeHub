@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Joke Hub</string>
+    <string name="random_jokes">Random Jokes</string>
+    <string name="categories">Categories</string>
+    <string name="favorite_joke">Favorite Joke</string>
+    <string name="rate_now">Rate Now</string>
+    <string name="ad_attribution" translatable="false">Ad</string>
+</resources>

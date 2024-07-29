@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="result"
+            type="com.example.jokehub.data.dto.Result" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/theme_yellow"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@{result.joke}"
+            android:textAlignment="center"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/share_joke_img"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="w,1:1"
+            app:layout_constraintEnd_toStartOf="@+id/copy_joke_img"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            android:src="@drawable/share"
+            app:layout_constraintVertical_bias="0.0"
+             />
+
+        <ImageView
+            android:id="@+id/copy_joke_img"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            app:layout_constraintBottom_toBottomOf="@+id/share_joke_img"
+            app:layout_constraintDimensionRatio="w,1:1"
+            app:layout_constraintEnd_toStartOf="@+id/favorite_joke_img"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/share_joke_img"
+            app:layout_constraintTop_toTopOf="@+id/share_joke_img"
+            android:src="@drawable/copy"
+           />
+
+        <ImageView
+            android:id="@+id/favorite_joke_img"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:src="@drawable/like"
+            app:layout_constraintBottom_toBottomOf="@+id/copy_joke_img"
+            app:layout_constraintDimensionRatio="w,1:1"
+            app:layout_constraintEnd_toStartOf="@+id/edit_joke_img"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/copy_joke_img"
+            app:layout_constraintTop_toTopOf="@+id/copy_joke_img"
+            />
+
+        <ImageView
+            android:id="@+id/edit_joke_img"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            app:layout_constraintBottom_toBottomOf="@+id/favorite_joke_img"
+            app:layout_constraintDimensionRatio="w,1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/favorite_joke_img"
+            app:layout_constraintTop_toTopOf="@+id/favorite_joke_img"
+            android:src="@drawable/edit"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
